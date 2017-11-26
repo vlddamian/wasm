@@ -1,0 +1,32 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>WASM test with XHR</title>
+</head>
+
+<body>
+<script>
+    var importObject = {
+        imports: {
+        }
+    };
+
+    request = new XMLHttpRequest();
+    request.open('GET', 'simple.wasm');
+    request.responseType = 'arraybuffer';
+    request.send();
+
+    request.onload = function() {
+        var bytes = request.response;
+        WebAssembly.instantiate(bytes, importObject).then(function(obj) {
+            console.log(obj.instance.exports.simple());
+        });
+    };
+</script>
+</body>
+
+</html>

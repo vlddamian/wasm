@@ -1,0 +1,1 @@
+emcc api_example.c -o api_example.js
