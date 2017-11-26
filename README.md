@@ -5,7 +5,7 @@
 
 
 
-#prerequisites
+## prerequisites
 1. webpack + loader not needed, but nice effect
 2. install emsdk -- google emscripten and install
 3. clang, python required ( on mac also Xcode CLI)
