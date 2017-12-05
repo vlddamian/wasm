@@ -1,7 +1,7 @@
 import first from './first.c';
 import second from './second.cpp';
 
-const iterations = 1;
+const iterations = 5;
 const value = 120000000;
 
 function printToDom(text) {
